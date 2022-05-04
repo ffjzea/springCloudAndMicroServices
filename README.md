@@ -7,4 +7,5 @@
 
 2.設定
 microService Communication
-  Feign Client
+  1.Feign Client
+  2.Resilience4j
