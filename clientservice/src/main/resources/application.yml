@@ -1,0 +1,15 @@
+server:
+  port: 8779
+  
+eureka:
+  instance:
+    hostname: client
+    instance-id: ${spring.application.name}:${vcap.applicaton.instance.instance_id:${spring.kafka.streams.application-id:${random.value}}}
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+       defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: eureka-client-service
